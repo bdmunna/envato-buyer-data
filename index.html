@@ -81,14 +81,16 @@
                         <label>Seller API Key:</label>
                         <input type="text" required name="api-key"/>
                         <label>Buyer Purchase Code:</label>
-                        <input type="text" required name="purchase-code"/>
-                        <label>What is thirteen minus 6?</label>
-                        <input type="number" required name="spam-number"><br />
+                        <input type="text" required name="purchase-code"/><br />
                         <input type="submit" id="submit" class="btn" value="Submit">
                     </form>
                     
                 </div>
                 <div class="span6">
+                    <div class="alert alert-error alertBox" style="display: none;">
+                        <p>Data is not available. Either you have entered your Envato username or API Key wrong or the Purchase Code is not valid!</p>
+                    </div>
+                    
                     <div class="alert alert-info infoBox" style="display: none;">
                         <p><strong>Item Name:</strong> <span class="itemName"></span></p>
                         <p><strong>Item ID:</strong> <span class="itemID"></span></p>
