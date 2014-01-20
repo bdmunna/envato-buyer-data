@@ -1,26 +1,29 @@
 $( document ).ready(function() {
 
-    // Envato Variables
+    //Variables
     
     var apiURL = 'http://marketplace.envato.com/api/v3/';
     var envURL;
     
-        // bind form using ajaxForm 
+        // get Form Data as JSON Object 
         $('#jsonForm').ajaxForm({ 
-            // dataType identifies the expected content type of the server response 
             dataType:  'json', 
-     
-            // success identifies the function to invoke when the server response 
-            // has been received 
             success:   processJson 
         }); 
     
+    // Use Form Data to access Envato Marketplaces API
     function processJson(data) { 
         envURL = apiURL+data.envForm.sellerUsername+"/"+data.envForm.apiKey+"/verify-purchase:"+data.envForm.purchaseCode+".json";
         
+        // Get JSON Object
         $.getJSON(envURL, function(purchaseData) {
+            // Hide both boxes in case form is resubmitted
             $(".infoBox, .alertBox").css("display", "none");
+            
+            // Display Info Div
             $(".infoBox").css("display", "block");
+            
+            // Put Object data in HTML
             $(".itemName").html(purchaseData["verify-purchase"].item_name);
             $(".itemID").html(purchaseData["verify-purchase"].item_id);
             $(".buyerUsername").html(purchaseData["verify-purchase"].buyer);
@@ -28,14 +31,12 @@ $( document ).ready(function() {
             $(".licenseType").html(purchaseData["verify-purchase"].licence);
         }).fail(function(jqXHR, status, error){
             if(status == 'error'){
+                // Hide both boxes in case form is resubmitted
                 $(".infoBox, .alertBox").css("display", "none");
+                
+                // Display Error Div
                 $(".alertBox").css("display", "block");
             }
         });
     }
-    
-    
-
-    
-    
 });

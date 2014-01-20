@@ -49,19 +49,19 @@
                     <a class="brand" href="#">
                         Envato Buyer Data
                     </a>
-                    <!--<div class="nav-collapse">
+                    <div class="nav-collapse">
                         <ul class="nav">
-                            <li class="active">
-                                <a href="#">Home</a>
+                            <li>
+                                <a href="https://github.com/cosminlupu/envato-buyer-data">GitHub Page</a>
                             </li>
                             <li>
-                                <a href="#about">About</a>
+                                <a href="https://github.com/cosminlupu/envato-buyer-data/archive/master.zip">Download .ZIP</a>
                             </li>
                             <li>
-                                <a href="#contact">Contact</a>
+                                <a href="http://www.cosminlupu.com">Author</a>
                             </li>
                         </ul>
-                    </div>--><!--/.nav-collapse -->
+                    </div><!--/.nav-collapse -->
                 </div>
             </div>
         </div>
@@ -69,12 +69,15 @@
         <div class="container">
             <div class="row">
                 <div class="span12">
-                    <p>Envato Buyer Data uses the Envato Marketplace API to get !</p>
+                    <p>Envato Buyer Data uses the Envato Marketplace API to see if a user has in fact bought the item he needs support for. The script uses the seller's username, API key along with a purchase code provided by a buyer to check if that purchase code is valid or not.</p>
+                    <p></p>If you'll enter any of your details wrong OR if the purchase code is not valid you will get an error. If the information provided is correct and the purchase code is valid you will get these details: Item Name, Item ID, Buyer Username, Date of Purchase and License Type!</p>
+                    <p>This demo was build with the help of <a href="https://github.com/robatron/bootstrap-quick-start" target="_blank">bootstrap-quick-start</a> and <a href="http://malsup.com/jquery/form/" target="_blank">jQuery Form</a>.</p>
                 </div>
             </div><!-- END /row -->
             
-            <div class="row">
+            <div class="row" style="margin-top: 30px;">
                 <div class="span6">
+                    <!-- Form used to pass data to API -->
                     <form id="jsonForm" action="page.php" method="post">
                         <label>Seller Username:</label>
                         <input type="text" required name="seller-username"/>
@@ -87,10 +90,12 @@
                     
                 </div>
                 <div class="span6">
+                    <!-- Error Div -->
                     <div class="alert alert-error alertBox" style="display: none;">
                         <p>Data is not available. Either you have entered your Envato username or API Key wrong or the Purchase Code is not valid!</p>
                     </div>
                     
+                    <!-- Info Div -->
                     <div class="alert alert-info infoBox" style="display: none;">
                         <p><strong>Item Name:</strong> <span class="itemName"></span></p>
                         <p><strong>Item ID:</strong> <span class="itemID"></span></p>
@@ -101,13 +106,9 @@
                 </div>
             </div><!-- END /row -->
             
-            <div class="row">
+            <div class="row" style="margin-top: 30px;">
                 <div class="span12">
-                    <p>
-                        Get the code at
-                        <a href='https://github.com/cosminlupu/envato-buyer-data'>
-                            github</a>.
-                    </p>
+                    <p>Created by <a href="http://cosminlupu.github.io" target="_blank">Cosmin Lupu</a>. Get the code at <a href='https://github.com/cosminlupu/envato-buyer-data' target="_blank">GitHub</a>.</p>
                 </div>
             </div><!-- END /row -->
         </div> <!-- /container -->
