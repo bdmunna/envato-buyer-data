@@ -67,26 +67,47 @@
         </div>
 
         <div class="container">
-            <h3>Use this form to get buyer data for your envato account!</h1>
+            <div class="row">
+                <div class="span12">
+                    <h3>Use this form to get buyer data for your envato account!</h3>
+                </div>
+            </div><!-- END /row -->
             
-            <form id="envatoForm" onsubmit="this.action">
-                <label>Seller Username:</label>
-                <input type="text" required/>
-                <label>Seller API Key:</label>
-                <input type="text" required/>
-                <label>Buyer Purchase Code:</label>
-                <input type="text" required/>
-                <label>What is thirteen minus 6?</label>
-                <input type="number" required><br />
-                <input type="submit" id="submit" class="btn">
-            </form>
+            <div class="row">
+                <div class="span6">
+                    <form id="jsonForm" action="page.php" method="post">
+                        <label>Seller Username:</label>
+                        <input type="text" required name="seller-username"/>
+                        <label>Seller API Key:</label>
+                        <input type="text" required name="api-key"/>
+                        <label>Buyer Purchase Code:</label>
+                        <input type="text" required name="purchase-code"/>
+                        <label>What is thirteen minus 6?</label>
+                        <input type="number" required name="spam-number"><br />
+                        <input type="submit" id="submit" class="btn" value="Submit">
+                    </form>
+                    
+                </div>
+                <div class="span6">
+                    <div class="alert alert-info infoBox" style="display: none;">
+                        <p><strong>Item Name:</strong> <span class="itemName"></span></p>
+                        <p><strong>Item ID:</strong> <span class="itemID"></span></p>
+                        <p><strong>Buyer Username:</strong> <span class="buyerUsername"></span></p>
+                        <p><strong>Date of Purchase:</strong> <span class="purchaseDate"></span></p>
+                        <p><strong>License Type:</strong> <span class="licenseType"></span></p>
+                    </div>
+                </div>
+            </div><!-- END /row -->
             
-            <p>
-                Get the code at
-                <a href='https://github.com/cosminlupu/envato-buyer-data'>
-                    github</a>.
-            </p>
-
+            <div class="row">
+                <div class="span12">
+                    <p>
+                        Get the code at
+                        <a href='https://github.com/cosminlupu/envato-buyer-data'>
+                            github</a>.
+                    </p>
+                </div>
+            </div><!-- END /row -->
         </div> <!-- /container -->
 
         <!-- javascript
