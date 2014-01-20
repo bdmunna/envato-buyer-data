@@ -1,4 +1,4 @@
-Envato Get Buyer Data
+Envato Buyer Data
 =====================
 
 Get buyer data from Envato Marketplaces by using users's purchase code. 
