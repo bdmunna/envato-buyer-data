@@ -5,6 +5,8 @@ Envato Buyer Data uses the Envato Marketplace API to see if a user has in fact b
 
 If you'll enter any of your details wrong OR if the purchase code is not valid you will get an error. If the information provided is correct and the purchase code is valid you will get these details: Item Name, Item ID, Buyer Username, Date of Purchase and License Type!
 
+Live Demo: [Envato Buyer Data](http://cosminlupu.com/sandbox/envato-buyer-data/)
+
 Steps:
 
 1. Get an API key for your account
